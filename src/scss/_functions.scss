@@ -1,0 +1,6 @@
+/* >> Functions
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+$base__fontSize: 16px;
+@function rem($target, $context: $base__fontSize){
+    @return ($target / $context) * 1rem;
+}

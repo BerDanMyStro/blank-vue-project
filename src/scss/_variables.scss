@@ -1,0 +1,60 @@
+/* --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- *\
+Scss - Variables
+\* --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+$baseFont: "'Open Sans', sans-serif";
+$baseFont-size: '16px';
+$color-baseFont: #2c3e50;
+$warningFont-size: '14px';
+$color-link: #1b6854;
+$color-error: #e74c3c;
+$color-errorLight: rgba(231, 76, 60, 0.25);
+$color-border: #eaecef;
+$color-mobilFooter: #252525;
+$color-mobilFooter-border: #3a3a3a;
+
+/* >> Colors
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+
+$brand-1: #364A5E;
+$brand-2: #42B883;
+$brand-3: #f6f6f6;
+$brand-4: #727f80;
+$brand-5: #6a8bad;
+$brand-6: #2c3e50;
+$brand-7: #389d70;
+
+$rgba-white25: rgba(255,255,255,0.25);
+$rgba-white50: rgba(255,255,255,0.5);
+$rgba-white75: rgba(255,255,255,0.75);
+$rgba-Black10: rgba(0,0,0,0.1);
+$rgba-black22: rgba(0,0,0,0.22);
+$rgba-black25: rgba(0,0,0,0.25);
+$rgba-black50: rgba(0,0,0,0.5);
+$rgba-black75: rgba(0,0,0,0.75);
+
+/* >> Other
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+$radius: 3px;
+$contentWidth: '1200px';
+
+/* >> Breakpoints
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+$mq-mobil_spec: "only screen and (max-width: 519px)";
+$mq-tab: "only screen and (min-width: 520px)";
+$mq-tab_590: "only screen and (min-width: 590px)";
+$mq-tab_720: "only screen and (min-width: 720px)";
+$mq-tab_spec: "only screen and (min-width: 520px) and (max-width: 959px)";
+$mq-pc_960: "only screen and (min-width: 960px)";
+$mq-pc_1200: "only screen and (min-width: 1200px)";
+$mq-pc_1360: "only screen and (min-width: 1360px)";
+$mq-pc_1360-Max: "only screen and (max-width: 1359px)";
+$mq-pc_1440: "only screen and (min-width: 1440px)";
+$mq-pc_1440-Max: "only screen and (max-width: 1439px)";
+$mq-pc_1560: "only screen and (min-width: 1560px)";
+$mq-pc_1560-Max: "only screen and (max-width: 1559px)";
+$mq-pc_1620: "only screen and (min-width: 1620px)";
+$mq-pc_1620-Max: "only screen and (max-width: 1619px)";
+$mq-iPad_port: "only screen and (min-width: 768px)";
+$mq-iPad_port-Max: "only screen and (max-width: 767px)";
+$mq-iPad_land: "only screen and (min-width: 1024px)";
+$mq-iPad_land-Max: "only screen and (max-width: 1023px)";

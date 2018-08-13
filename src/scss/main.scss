@@ -1,0 +1,80 @@
+/* >> Import Fonts
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+//@import "fonts";
+
+/* >> Import Variables
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+@import "variables";
+
+/* >> Import functions
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+@import "functions";
+
+/* >> Import Mixins
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+@import "mixins";
+
+/* >> Import Groups
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+@import "groups";
+
+/* >> Import Layouts
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+@import "reset-20150710";
+
+/* --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- *\
+Import BEM (Block - Element - Modifier)
+\* --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+/*@import "blocks/header";
+@import "blocks/header__toggleMenu";
+@import "blocks/header__menu";
+@import "blocks/header__personalMenu";
+@import "blocks/pager";
+@import "blocks/carousel3d";
+@import "blocks/footer";
+@import "blocks/footer__siteMenu";
+@import "blocks/footer__mobilFooter";
+@import "blocks/popUp-alerts";
+@import "blocks/cookieConsent";
+@import "blocks/scroller";*/
+
+/* Import Project Style */
+/*@import "sections/popup";
+@import "sections/parallaxCanvas";
+@import "sections/parallaxHeader";
+@import "sections/homeVideo";
+@import "sections/employeeOpinion";
+@import "sections/topJobs";
+@import "sections/linkedIn";
+@import "sections/topJobs";
+@import "sections/aboutUs";
+@import "sections/pride";
+@import "sections/contactUs";*/
+
+/* Pages */
+/*@import "pages/joinUs";
+@import "pages/jobList";
+@import "pages/jobEnd";
+@import "pages/jobBasket";
+@import "pages/login";
+@import "pages/userReg";
+@import "pages/userData";
+@import "pages/personalPage";
+@import "pages/infoGraphic";
+@import "pages/network";
+
+@import "pages/formFix";*/
+
+/*@import "blocks/modal";*/
+
+/* >> Global Style
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+
+html{
+    height: 100%;
+}
+body {
+    @extend %stickyFooter;
+    font-family: #{$baseFont};
+    color: $color-baseFont;
+}
