@@ -1,8 +1,13 @@
 <template>
   <div class="blankList">
     <h3 class="pageSubtitle">{{ pageSubtitle }}</h3>
+    <div class="blankList__filter">
+      <form>
+        <input type="text" title="Place Filter" placeholder="City" v-model="search">
+      </form>
+    </div>
     <div class="blankList-Wrapper">
-      <div class="blankList__item" v-for="listItem in listData" v-bind:key="listItem.id">
+      <div class="blankList__item" v-for="listItem in filteredPlaces" v-bind:key="listItem.id">
         <div class="blankList__item__title">{{ listItem.listTitle }}</div>
         <div class="blankList__item__description">{{ listItem.listDesc }}</div>
         <div class="blankList__item__flag">
@@ -32,13 +37,13 @@ export default {
           listTitle: 'Blank List Item Title 2',
           listDesc: 'Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content.',
           flags: ['Flag2', 'Flag3', 'Flag4'],
-          place: 'Szeged'
+          place: 'Budapest'
         },
         {
           listTitle: 'Blank List Item Title 3',
           listDesc: 'Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content.',
           flags: ['Flag3'],
-          place: 'Szeged'
+          place: 'Kecskemét'
         },
         {
           listTitle: 'Blank List Item Title 4',
@@ -46,7 +51,16 @@ export default {
           flags: ['Flag2', 'Flag4'],
           place: 'Szeged'
         }
-      ]
+      ],
+      search: ''
+    }
+  },
+  methods: {},
+  computed: {
+    filteredPlaces: function () {
+      return this.listData.filter((listItem) => {
+        return listItem.place.match(this.search)
+      })
     }
   }
 }
@@ -101,5 +115,11 @@ export default {
   }
   .blankList__item__place{
     font-weight: 700;
+  }
+  /* Place Filter */
+  .blankList__filter{
+    @extend %flexBox;
+    justify-content: flex-end;
+    margin-bottom: 24px;
   }
 </style>
