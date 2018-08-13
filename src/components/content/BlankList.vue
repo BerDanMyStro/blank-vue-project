@@ -4,6 +4,9 @@
     <div class="blankList__filter">
       <form>
         <input type="text" title="Place Filter" placeholder="City" v-model="search">
+        <select name="selectFlag">
+          <option>Select Flag</option>
+        </select>
       </form>
     </div>
     <div class="blankList-Wrapper">
@@ -29,7 +32,7 @@ export default {
       listData: [
         {
           listTitle: 'Blank List Item Title 1',
-          listDesc: 'Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content.',
+          listDesc: 'Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It\'s also called placeholder (or filler) text. It\'s a convenient tool for mock-ups. It helps to outline the visual elements of a document or presentation, eg typography, font, or layout.',
           flags: ['Flag1'],
           place: 'Szeged'
         },
@@ -41,7 +44,7 @@ export default {
         },
         {
           listTitle: 'Blank List Item Title 3',
-          listDesc: 'Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content.',
+          listDesc: 'In a professional context it often happens that private or corporate clients corder a publication to be made and presented with the actual content still not being ready. Think of a news blog that\'s filled with content hourly on the day of going live. However, reviewers tend to be distracted by comprehensible content, say, a random text copied from a newspaper or the internet.',
           flags: ['Flag3'],
           place: 'Kecskemét'
         },
@@ -121,5 +124,24 @@ export default {
     @extend %flexBox;
     justify-content: flex-end;
     margin-bottom: 24px;
+    input, select{
+      @include appearencNone;
+      height: 36px;
+      padding: 0 8px;
+      border: 1px solid $color-border;
+      border-radius: $radius;
+      outline-color: $brand-2;
+      &::-webkit-input-placeholder{
+        color: $color-baseFont;
+      }
+    }
+    select{
+      min-width: 120px;
+      padding: 0 36px 0 8px;
+      background: url("../../assets/img/svg-select.svg") no-repeat right 7px center / 10px;
+      option{
+        color: $color-baseFont;
+      }
+    }
   }
 </style>
