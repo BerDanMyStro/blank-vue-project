@@ -1,23 +1,25 @@
 <template>
-  <header>
-    <div class="contentWrapper">
-      <HeaderLogo/>
-      <div class="header__title">
-        Vue.js demo page
-      </div>
-    </div>
-  </header>
+  <div id="jumpHere" class="stickyWrapper">
+    <PageHeader/>
+    <PageWrapper/>
+    <PageFooter/>
+  </div>
 </template>
 
 <script>
-import HeaderLogo from './components/header/HeaderLogo'
+import PageHeader from './components/PageHeader'
+import PageFooter from './components/PageFooter'
+import PageWrapper from './components/PageWrapper'
 
 export default {
-  name: 'PageHeader',
+  name: 'learnApp',
   components: {
-    HeaderLogo
+    PageHeader,
+    PageWrapper,
+    PageFooter
   }
 }
+
 </script>
 
 <style lang="scss">

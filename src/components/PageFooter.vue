@@ -20,10 +20,10 @@ export default {
 </script>
 
 <style lang="scss">
-    @import "scss/variables";
-    @import "scss/functions";
-    @import "scss/mixins";
-    @import "scss/groups";
+    @import "../scss/variables";
+    @import "../scss/functions";
+    @import "../scss/mixins";
+    @import "../scss/groups";
 
     footer{
         @extend %clearFix;

@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import BlankList from './components/BlankList'
+import BlankList from './content/BlankList'
 
 export default {
   name: 'pageWrapper',
@@ -22,10 +22,10 @@ export default {
 </script>
 
 <style lang="scss">
-  @import "scss/variables";
-  @import "scss/functions";
-  @import "scss/mixins";
-  @import "scss/groups";
+  @import "../scss/variables";
+  @import "../scss/functions";
+  @import "../scss/mixins";
+  @import "../scss/groups";
 
   #pageWrapper{
     width: 100%;
