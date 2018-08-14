@@ -10,9 +10,9 @@
       </form>
     </div>
     <div class="blankList-Wrapper">
-      <div class="blankList__item" v-for="listItem in filteredPlaces" v-bind:key="listItem.id">
+      <div class="blankList__item" v-for="(listItem, key) in filteredPlaces" v-bind:key="listItem.id" v-on:click="listData[key].displayData = !listData[key].displayData">
         <div class="blankList__item__title">{{ listItem.listTitle }}</div>
-        <div class="blankList__item__description">{{ listItem.listDesc }}</div>
+        <div class="blankList__item__description" v-show="listData[key].displayData">{{ listItem.listDesc }}</div>
         <div class="blankList__item__flag">
           <span v-for="flag in (listItem.flags)" v-bind:key="flag.id">{{ flag }}</span>
         </div>
@@ -34,31 +34,44 @@ export default {
           listTitle: 'Blank List Item Title 1',
           listDesc: 'Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It\'s also called placeholder (or filler) text. It\'s a convenient tool for mock-ups. It helps to outline the visual elements of a document or presentation, eg typography, font, or layout.',
           flags: ['Flag1'],
-          place: 'Szeged'
+          place: 'Szeged',
+          displayData: false
         },
         {
           listTitle: 'Blank List Item Title 2',
           listDesc: 'Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content.',
           flags: ['Flag2', 'Flag3', 'Flag4'],
-          place: 'Budapest'
+          place: 'Budapest',
+          displayData: false
         },
         {
           listTitle: 'Blank List Item Title 3',
           listDesc: 'In a professional context it often happens that private or corporate clients corder a publication to be made and presented with the actual content still not being ready. Think of a news blog that\'s filled with content hourly on the day of going live. However, reviewers tend to be distracted by comprehensible content, say, a random text copied from a newspaper or the internet.',
           flags: ['Flag3'],
-          place: 'Kecskemét'
+          place: 'Kecskemét',
+          displayData: true
         },
         {
           listTitle: 'Blank List Item Title 4',
           listDesc: 'Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content.',
           flags: ['Flag2', 'Flag4'],
-          place: 'Szeged'
+          place: 'Szeged',
+          displayData: false
+        },
+        {
+          listTitle: 'Blank List Item Title 2',
+          listDesc: 'Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content.',
+          flags: ['Flag2', 'Flag3', 'Flag4'],
+          place: 'Budapest',
+          displayData: false
         }
       ],
       search: ''
     }
   },
-  methods: {},
+  methods: {
+
+  },
   computed: {
     filteredPlaces: function () {
       return this.listData.filter((listItem) => {
@@ -69,7 +82,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   @import "../../scss/variables";
   @import "../../scss/functions";
   @import "../../scss/mixins";
@@ -83,10 +96,12 @@ export default {
   }
   .blankList__item{
     @extend %clearFix;
+    @include selectDisable;
     margin: 0 auto 24px;
     padding: 24px;
     border-left: 2px solid $brand-2;
     box-shadow: -2px 0 0 0 $brand-7;
+    cursor: pointer;
     &:last-child{
       margin: 0 auto;
     }

@@ -2,7 +2,7 @@
   <div id="pageWrapper">
     <div class="contentWrapper">
       <h2 class="pageTitle">{{ pageTitle }}</h2>
-      <BlankList/>
+      <router-view></router-view>
     </div>
   </div>
 </template>

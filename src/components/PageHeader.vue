@@ -2,9 +2,10 @@
   <header class="pageHeader">
     <div class="contentWrapper">
       <HeaderLogo/>
-      <div class="header__title">
-        Vue.js demo page
-      </div>
+      <nav>
+        <router-link to="/">Home</router-link>
+        <router-link to="/blankList">BlankList</router-link>
+      </nav>
     </div>
   </header>
 </template>
@@ -29,13 +30,28 @@ export default {
     border-bottom: 1px solid $color-border;
     .contentWrapper{
       @extend %flexBox;
-      justify-content: flex-start;
+      justify-content: space-between;
       align-items: center;
     }
   }
-
-  .header__title{
-    font-size: 24px;
+  nav{
+    @extend %flexBox;
+    width: auto;
+    align-items: flex-end;
+    a{
+      display: block;
+      margin: 0 8px 0 0;
+      padding: 8px 12px;
+      color: $color-baseFont;
+      &:last-child{
+        margin: 0;
+      }
+      &.router-link-exact-active{
+        background: $brand-2;
+        color: white;
+        border-radius: $radius;
+      }
+    }
   }
 
 </style>
