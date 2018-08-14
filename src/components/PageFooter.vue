@@ -25,7 +25,7 @@ export default {
     @import "../scss/mixins";
     @import "../scss/groups";
 
-    footer{
+    #footer{
         @extend %clearFix;
         width: 100%;
         padding: 32px 0;

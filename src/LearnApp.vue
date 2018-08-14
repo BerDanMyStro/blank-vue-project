@@ -22,22 +22,4 @@ export default {
 
 </script>
 
-<style lang="scss">
-  @import "scss/variables";
-  @import "scss/groups";
-
-  header{
-    padding: 16px 0;
-    border-bottom: 1px solid $color-border;
-    .contentWrapper{
-      @extend %flexBox;
-      justify-content: flex-start;
-      align-items: center;
-    }
-  }
-
-  .header__title{
-    font-size: 24px;
-  }
-
-</style>
+<style lang="scss"></style>

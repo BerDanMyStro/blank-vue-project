@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header class="pageHeader">
     <div class="contentWrapper">
       <HeaderLogo/>
       <div class="header__title">
@@ -24,7 +24,7 @@ export default {
   @import "../scss/variables";
   @import "../scss/groups";
 
-  header{
+  .pageHeader{
     padding: 16px 0;
     border-bottom: 1px solid $color-border;
     .contentWrapper{
