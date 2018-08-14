@@ -2,7 +2,7 @@
   <header class="pageHeader">
     <div class="contentWrapper">
       <HeaderLogo/>
-      <nav>
+      <nav class="header__nav">
         <router-link to="/">Home</router-link>
         <router-link to="/blankList">BlankList</router-link>
       </nav>
@@ -34,7 +34,7 @@ export default {
       align-items: center;
     }
   }
-  nav{
+  .header__nav{
     @extend %flexBox;
     width: auto;
     align-items: flex-end;

@@ -11,7 +11,7 @@ export default {
   name: 'BlankHome',
   data () {
     return {
-      pageSubtitle: 'Blank List Rendering with v-for'
+      pageSubtitle: 'Blank Vue Page to Learn'
     }
   },
   methods: {
