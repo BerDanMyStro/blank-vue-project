@@ -22,6 +22,11 @@ export default {
         password: 'admin'
       }
     }
+  },
+  methods: {
+    setAuthenticated (status) {
+      this.authenticated = status
+    }
   }
 }
 </script>
