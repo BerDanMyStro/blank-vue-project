@@ -2,7 +2,7 @@
   <div id="pageWrapper">
     <div class="contentWrapper">
       <h2 class="pageTitle">{{ pageTitle }}</h2>
-      <router-view></router-view>
+      <router-view @authenticated="setAuthenticated"></router-view>
     </div>
   </div>
 </template>
@@ -15,7 +15,12 @@ export default {
   components: {BlankList},
   data () {
     return {
-      pageTitle: 'Welcome to Vue.js demo page'
+      pageTitle: 'Welcome to Vue.js demo page',
+      authenticated: false,
+      mockAccount: {
+        username: 'mystro',
+        password: 'admin'
+      }
     }
   }
 }
