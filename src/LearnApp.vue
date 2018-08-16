@@ -22,4 +22,16 @@ export default {
 
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+  @import "./scss/variables";
+  @import "./scss/functions";
+  @import "./scss/mixins";
+  @import "./scss/groups";
+  .pageSubtitle{
+    color: $brand-5;
+    margin: 0 auto 24px;
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center;
+  }
+</style>

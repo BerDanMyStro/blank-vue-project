@@ -2,10 +2,10 @@
   <header class="pageHeader">
     <div class="contentWrapper">
       <HeaderLogo/>
-      <nav class="header__nav">
+      <!--<nav class="header__nav">
         <router-link to="/">Home</router-link>
         <router-link to="/blankList">BlankList</router-link>
-      </nav>
+      </nav>-->
     </div>
   </header>
 </template>
@@ -26,12 +26,14 @@ export default {
   @import "../scss/groups";
 
   .pageHeader{
+    width: 100%;
     padding: 16px 0;
     border-bottom: 1px solid $color-border;
     .contentWrapper{
       @extend %flexBox;
       justify-content: space-between;
       align-items: center;
+      width: 90%;
     }
   }
   .header__nav{
