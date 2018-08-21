@@ -1,15 +1,15 @@
 <template>
   <div class="blankList">
     <h3 class="pageSubtitle">{{ pageSubtitle }}</h3>
-    <div class="blankList__filter">
-      <form>
-        <input type="text" title="Place Filter" placeholder="City" v-model="search">
-        <!--<select name="selectFlag">
-          <option>Select Flag</option>
-        </select>-->
-      </form>
+    <div class="blankList__listFunctions">
+      <div class="blankList__displayMode" v-on:click="tiled = !tiled" v-bind:class="{tiled:tiled}"></div>
+      <div class="blankList__filter">
+        <form>
+          <input type="text" title="Place Filter" placeholder="City" v-model="search">
+        </form>
+      </div>
     </div>
-    <div class="blankList-Wrapper">
+    <div class="blankList-Wrapper" v-bind:class="{tiled:tiled}">
       <div class="blankList__item" v-for="(listItem, key) in filteredPlaces" v-bind:key="listItem.id" v-on:click="listData[key].displayData = !listData[key].displayData">
         <div class="blankList__item__title">{{ listItem.listTitle }}</div>
         <div class="blankList__item__description" v-show="listData[key].displayData">{{ listItem.listDesc }}</div>
@@ -29,6 +29,7 @@ export default {
   data () {
     return {
       pageSubtitle: 'Blank List Rendering with v-for',
+      tiled: false,
       listData: [
         {
           listTitle: 'Blank List Item Title 1',
@@ -75,7 +76,7 @@ export default {
   computed: {
     filteredPlaces: function () {
       return this.listData.filter((listItem) => {
-        return listItem.place.match(this.search)
+        return listItem.place.toLowerCase().match(this.search.toLowerCase())
       })
     }
   }
@@ -98,6 +99,20 @@ export default {
     cursor: pointer;
     &:last-child{
       margin: 0 auto;
+    }
+  }
+  .blankList-Wrapper.tiled{
+    @extend %flexBox;
+    justify-content: flex-start;
+    .blankList__item{
+      @include flexWidth(100%);
+      @media #{$mq-iPad_port} {
+        @include flexWidth(49%);
+        margin: 0 2% 24px 0;
+        &:nth-child(2n){
+          margin: 0 0 24px;
+        }
+      }
     }
   }
   .blankList__item__title{
@@ -128,11 +143,28 @@ export default {
   .blankList__item__place{
     font-weight: 700;
   }
+  .blankList__listFunctions{
+    @extend %flexBox;
+    justify-content: space-between;
+  }
+  .blankList__displayMode{
+    display: block;
+    width: 36px;
+    height: 36px;
+    background: $brand-2 url("../../assets/img/icon-tile.svg") no-repeat center center / 20px;
+    border-radius: $radius;
+    cursor: pointer;
+    &.tiled{
+      background: $brand-2 url("../../assets/img/icon-list.svg") no-repeat center center / 20px;
+    }
+  }
   /* Place Filter */
   .blankList__filter{
     @extend %flexBox;
     justify-content: flex-end;
     margin-bottom: 24px;
+    width: auto;
+    width: auto;
     input, select{
       @include appearencNone;
       height: 36px;
