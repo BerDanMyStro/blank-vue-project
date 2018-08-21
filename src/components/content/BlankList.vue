@@ -4,9 +4,9 @@
     <div class="blankList__filter">
       <form>
         <input type="text" title="Place Filter" placeholder="City" v-model="search">
-        <select name="selectFlag">
+        <!--<select name="selectFlag">
           <option>Select Flag</option>
-        </select>
+        </select>-->
       </form>
     </div>
     <div class="blankList-Wrapper">

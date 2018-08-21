@@ -1,6 +1,6 @@
 <template>
   <div class="logoWrapper">
-      <a href="index.html" class="header__logo">
+      <a href="/" class="header__logo">
           <img src="../../assets/img/logo.svg">
           <span class="seoWrapper">
           <h1>{{ seoTitle }}</h1>
@@ -39,8 +39,8 @@ export default {
     overflow: hidden;
     .seoWrapper{
       position: absolute;
-      right: -200%;
-      bottom: -200%;
+      right: 200%;
+      bottom: 200%;
     }
   }
   .header__title{

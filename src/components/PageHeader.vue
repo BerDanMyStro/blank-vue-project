@@ -2,10 +2,10 @@
   <header class="pageHeader">
     <div class="contentWrapper">
       <HeaderLogo/>
-      <!--<nav class="header__nav">
-        <router-link to="/">Home</router-link>
+      <nav class="header__nav">
         <router-link to="/blankList">BlankList</router-link>
-      </nav>-->
+        <router-link to="/blankTable">BlankTable</router-link>
+      </nav>
     </div>
   </header>
 </template>
